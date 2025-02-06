@@ -1,0 +1,7 @@
+# Các thư mục và file không cần push
+bin/
+obj/
+.vs/
+*.user
+*.exe
+*.pdb
