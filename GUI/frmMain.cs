@@ -100,7 +100,7 @@ namespace GUI
         private void đăngnhapToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmLogin dn = new frmLogin();
-            if (!CheckExistForm("FrmDangNhap"))
+            if (!CheckExistForm("frmDangNhap"))
             {
                 dn.MdiParent = this;
                 dn.Show();
@@ -108,7 +108,7 @@ namespace GUI
             }
             else
             {
-                ActiveChildForm("FrmDangNhap");
+                ActiveChildForm("frmDangNhap");
             }
         }
 
@@ -150,6 +150,58 @@ namespace GUI
         {
             session = 0;
             Resetvalue();
+        }
+
+        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHang frmHang = new frmHang();
+            if(!CheckExistForm("frmHang"))
+            {
+                frmHang.MdiParent = this;
+                frmHang.FormClosed += new FormClosedEventHandler(FrmThongTinNV_FormClosed);
+                frmHang.Show();
+            }
+            else
+                ActiveChildForm("frmHang");
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNhanVien nhanVien = new frmNhanVien();
+            if(!CheckExistForm("frmNhanVien"))
+            {
+                nhanVien.MdiParent = this;
+                nhanVien.FormClosed += new FormClosedEventHandler(FrmThongTinNV_FormClosed);
+                nhanVien.Show();
+            }
+            else
+                ActiveChildForm("frmNhanVien");
+        }
+
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKhach khach = new frmKhach();
+            if(!CheckExistForm("frmKhach"))
+            {
+                khach.MdiParent = this;
+                khach.FormClosed += new FormClosedEventHandler(FrmThongTinNV_FormClosed);
+                khach.Show();
+            }
+            else
+                ActiveChildForm("frmKhach");
+        }
+
+        private void thốngKêSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThongKe thongKe = new frmThongKe();
+            if(!CheckExistForm("frmThongKe"))
+            {
+                thongKe.MdiParent = this;
+                thongKe.FormClosed += new FormClosedEventHandler(FrmThongTinNV_FormClosed);
+                thongKe.Show();
+            }
+            else
+                ActiveChildForm("frmThongKe");
         }
     }
 }

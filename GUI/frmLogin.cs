@@ -37,7 +37,6 @@ namespace GUI
                 else 
                 {
                     MessageBox.Show("Đăng nhập không thành công vui lòng kiểm tra lại email hoặc mk");
-                    MessageBox.Show(busNhanVien.NVDangNhap(nv).ToString());
                     txtEmail.Text = "";
                     txtMatKhau.Text = "";
                     txtEmail.Focus();
@@ -77,7 +76,7 @@ namespace GUI
                     sb.Append(RandomNumber(12345, 54321));
                     string matkhau = encryption(sb.ToString());
                     busNhanVien.TaoMatKhau(txtEmail.Text,matkhau);
-                    SendMail(txtEmail.Text,matkhau);
+                    SendMail(txtEmail.Text,sb.ToString());
                 }
             }
         }
@@ -107,9 +106,9 @@ namespace GUI
             {
                 SmtpClient client = new SmtpClient("smtp.gmail.com")
                 {
-                    Port = 25,
+                    Port = 587,
                     EnableSsl = true,
-                    Credentials = new NetworkCredential("admin@gmail.com", "123")
+                    Credentials = new NetworkCredential("cunhat240907@gmail.com", "vxnp dueh saxx pmey")
                 };
             
                 MailMessage Msg = new MailMessage()

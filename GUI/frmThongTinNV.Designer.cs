@@ -201,6 +201,7 @@
             this.Controls.Add(this.txtmatkhaucu);
             this.Controls.Add(this.label1);
             this.Name = "frmThongTinNV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmThongTinNV";
             this.Load += new System.EventHandler(this.frmThongTinNV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
