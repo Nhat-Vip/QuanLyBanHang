@@ -50,6 +50,7 @@ namespace GUI
                         frmMain.profile = 1;
                         frmMain.session = 0;
                         MessageBox.Show("Cập nhật mật khẩu thành công. Bạn phải đăng nhập lại");
+                        OpenNewForm();
                         this.Close();
                     }
                     else
@@ -69,7 +70,11 @@ namespace GUI
                 }
             }
         }
-
+        private void OpenNewForm()
+        {
+            //Application.Exit();
+            Application.Run(new frmLogin());
+        }
         private void frmThongTinNV_Load(object sender, EventArgs e)
         {
             
